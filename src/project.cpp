@@ -39,7 +39,7 @@ namespace pt {
         mkdir(root_dir_ / "cmake");
         mkdir(root_dir_ / "include" / name_);
 
-        std::string guard = name_;
+        std::string guard{name_};
         std::transform(guard.begin(), guard.end(), guard.begin(), ::toupper);
 
         write_simple(root_dir_ / "include" / name_ / "factorial.hpp", "include/project_template/factorial.template",
