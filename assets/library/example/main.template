@@ -1,0 +1,7 @@
+#include <{PROJECT_NAME}/factorial.hpp>
+#include <iostream>
+
+int main(int argc, char* argv[])
+{{
+    std::cout << {PROJECT_NAME}::factorial(5) << '\n';
+}}

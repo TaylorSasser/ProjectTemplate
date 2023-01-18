@@ -1,0 +1,11 @@
+#ifndef {GUARD}_FACTORIAL_HPP
+#define {GUARD}_FACTORIAL_HPP
+
+
+namespace {PROJECT_NAME}
+{{
+    int factorial(int a);
+}}
+
+
+#endif {GUARD}_FACTORIAL_HPP

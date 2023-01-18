@@ -1,0 +1,12 @@
+#include <{PROJECT_NAME}/factorial.hpp>
+
+namespace {PROJECT_NAME}
+{{
+    int factorial(int a)
+    {{
+        if (a == 0)
+            return a;
+        return a * factorial(a - 1);
+    }}
+
+}}

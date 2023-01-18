@@ -1,0 +1,22 @@
+# Stolen from HPX repository
+#
+# https://github.com/STEllAR-GROUP/hpx/blob/master/.gitignore
+
+*.pyc
+/build
+.DS_Store
+.gitignore
+.ptp-sync-folder
+/Dockerfile
+/.dockerignore
+.ycm_extra_conf.py
+/apex
+packages
+.vscode
+.ccls-cache
+.clangd
+/out
+.vs
+.idea
+cmake-build*
+/.cache

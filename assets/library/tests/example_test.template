@@ -1,0 +1,14 @@
+#include <catch2/catch_all.hpp>
+
+/*
+ * Feel free to change this file name to whatever you would like.
+ * Once name is changed, replace project_name the CMakeLists.txt in the tests/ directory with the updated file
+ */
+
+TEST_CASE("Example function","[function]")
+{
+    SECTION("Section 1")
+    {
+
+    }
+}
