@@ -2,8 +2,10 @@
 #include <filesystem>
 #include <cctype>
 #include <iostream>
+#include <vector>
+#include <algorithm>
 
-//usage make-proj lab_01 . lib
+
 
 int main(int argc, char* argv[])
 {
