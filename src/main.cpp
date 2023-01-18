@@ -1,14 +1,7 @@
 #include <pt/project.hpp>
 #include <filesystem>
 #include <cctype>
-
 #include <iostream>
-
-
-
-
-
-
 
 //usage make-proj lab_01 . lib
 
