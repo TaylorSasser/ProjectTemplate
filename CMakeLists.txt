@@ -62,7 +62,7 @@ set(INSTALL_CONFIGDIR ${CMAKE_INSTALL_LIBDIR}/cmake/project_template_utils)
 install(
     TARGETS project_template
     EXPORT project_template_targets
-    RUNTIME DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 )
 
 include(CMakePackageConfigHelpers)
