@@ -47,13 +47,14 @@ find_package(fmt CONFIG REQUIRED)
 target_link_libraries(project_template PUBLIC fmt::fmt)
 target_link_libraries(project_template PUBLIC resources)
 
-target_compile_features(project_template
-    PRIVATE cxx_auto_type cxx_lambdas cxx_trailing_return_types cxx_variadic_macros
+target_compile_features(project_template PRIVATE
+    cxx_auto_type
+    cxx_lambdas
+    cxx_trailing_return_types
+    cxx_variadic_macros
 )
 
-target_compile_options(project_template
-    PRIVATE
-)
+target_compile_options(project_template PRIVATE)
 
 include(GNUInstallDirs)
 set(INSTALL_CONFIGDIR ${CMAKE_INSTALL_LIBDIR}/cmake/project_template_utils)
@@ -61,11 +62,8 @@ set(INSTALL_CONFIGDIR ${CMAKE_INSTALL_LIBDIR}/cmake/project_template_utils)
 install(
     TARGETS project_template
     EXPORT project_template_targets
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    RUNTIME DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
-
-install(DIRECTORY include/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 
 include(CMakePackageConfigHelpers)
 write_basic_package_version_file(
@@ -74,9 +72,7 @@ write_basic_package_version_file(
     COMPATIBILITY AnyNewerVersion
 )
 
-install(FILES
-    DESTINATION ${INSTALL_CONFIGDIR}
-)
+install(FILES DESTINATION ${INSTALL_CONFIGDIR})
 
 export(
     EXPORT project_template_targets
