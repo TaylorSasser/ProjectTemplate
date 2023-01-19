@@ -19,8 +19,7 @@ namespace pt {
 
         if constexpr (sizeof...(args) == 0)
             std::copy(buff.begin(), buff.end(), std::ostreambuf_iterator<char>(template_file));
-        else
-        {
+        else {
             auto out = fmt::memory_buffer();
             fmt::format_to(std::back_inserter(out), buff, std::forward<decltype(args)>(args)...);
             std::copy(out.begin(), out.end(), std::ostreambuf_iterator<char>(template_file));

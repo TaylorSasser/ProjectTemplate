@@ -6,7 +6,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 
 
 add_executable(project_template
-        src/main.cpp
+    src/main.cpp
     src/project.cpp
 )
 
@@ -16,7 +16,7 @@ add_executable(
 
 target_include_directories(
     project_template
-        PUBLIC
+    PUBLIC
         $<INSTALL_INTERFACE:include>
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     PRIVATE
