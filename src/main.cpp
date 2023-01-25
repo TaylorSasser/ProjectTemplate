@@ -5,13 +5,13 @@
 #include <vector>
 #include <algorithm>
 
-
-
 int main(int argc, char* argv[])
 {
     std::vector<std::string> args{};
     for (auto i{0}; i < argc; ++i)
         args.emplace_back(argv[i]);
+    if (argc != 3)
+        return 0;
 
     std::string project_name = args[1];
     std::filesystem::path pwd = std::filesystem::current_path() / std::filesystem::relative(args[2]);

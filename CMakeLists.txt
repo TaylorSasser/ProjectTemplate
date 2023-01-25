@@ -4,7 +4,6 @@ project(project_template VERSION 1.0.0 LANGUAGES CXX C ASM)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 
-
 add_executable(project_template
     src/main.cpp
     src/project.cpp
@@ -16,7 +15,7 @@ add_executable(
 
 target_include_directories(
     project_template
-    PUBLIC
+        PUBLIC
         $<INSTALL_INTERFACE:include>
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
     PRIVATE
@@ -63,6 +62,7 @@ install(
     TARGETS project_template
     EXPORT project_template_targets
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
 
 include(CMakePackageConfigHelpers)
